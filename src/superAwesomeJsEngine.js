@@ -17,8 +17,8 @@ SuperAwesomeJs = function(canvas) {
 
     animloop = function(){
         requestAnimFrame(animloop);
-        //curr_state.update();
-        //curr_state.redraw();
+        curr_state.update(ctx);
+        curr_state.redraw();
     }
 
 
@@ -30,9 +30,9 @@ SuperAwesomeJs = function(canvas) {
     sFactory.newState("Game", new GameState("main"));
     //StateFactory.newState("Second", new GameState());
 
-    sFactory.startState("Game");
+    curr_state = sFactory.startState("Game");
 
-
+    animloop();
 
 
     

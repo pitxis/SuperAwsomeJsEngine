@@ -1,7 +1,7 @@
- StateFactory = function(animloop, ctx) {
+ StateFactory = function(ctx) {
 
  	var states = {}; 	
-
+ 	var anim = animloop;
  	return {
 		newState: function(name, state) {
 			states[name] = state;
@@ -10,7 +10,8 @@
 		},
 
 		startState: function(name) {
-			states[name].run(animloop);
+			//states[name].run();
+			return states[name];
 		},
 
 		endState: function() {

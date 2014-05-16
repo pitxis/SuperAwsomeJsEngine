@@ -1,7 +1,5 @@
  State = function() {
 
-	var components = [];
-	var name;
 
 	return {
 
@@ -9,21 +7,24 @@
 			this.name = name;
 			this.ctx = ctx;
 			this.stopCallback = callb;
+			this.entities = {};
 			this.setup();
 		},
+
+		loadEntities : function () {},
 		
 		setup : function () {
 			console.log("hola");
 		},
 		
-		run : function(animloop) {
-			animloop();
+		run : function() {
 		},
 
 		update : function() {
 		},
 
 		redraw : function(){
+
 		},
 
 		stop : function(name){
